@@ -2,8 +2,8 @@
 
 import streamlit as st
 
-st.set_page_config(page_title="Electricity Bill Split", page_icon="⚡")
-st.title("⚡ Monthly Electricity Calculator")
+st.set_page_config(page_title="Electricity Bill Split", page_icon="")
+st.title("Monthly Electricity Calculator")
 st.write("Household electricity is split **50/50**. Laundry is split by **hours used**.")
 
 # The dryer is 240 V × 26 A = 6,240 W.
@@ -16,9 +16,9 @@ with st.form("monthly_bill"):
     power_kw = st.number_input("Washer + dryer combined power (kW)", min_value=0.0, value=7.44, step=0.01)
     col1, col2 = st.columns(2)
     with col1:
-        my_hours = st.number_input("My laundry hours", min_value=0.0, value=11.0, step=0.5)
+        my_hours = st.number_input("Odame's laundry hours", min_value=0.0, value=11.0, step=0.5)
     with col2:
-        your_hours = st.number_input("Your laundry hours", min_value=0.0, value=20.0, step=0.5)
+        your_hours = st.number_input("Raphael's laundry hours", min_value=0.0, value=20.0, step=0.5)
     calculate = st.form_submit_button("Calculate our payments", use_container_width=True)
 
 if calculate:
@@ -71,4 +71,4 @@ if calculate:
             st.caption(f"{your_pct:.2f}% of the total bill")
         st.info(f"Both payments add up to **${my_payment + your_payment:.2f}**.")
 
-st.caption("Estimate only: assumes both machines draw their stated combined power for all recorded laundry hours.")
+# st.caption("Estimate only: assumes both machines draw their stated combined power for all recorded laundry hours.")
