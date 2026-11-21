@@ -58,16 +58,16 @@ if calculate:
 
         st.subheader("3. Laundry bill — based on hours")
         st.write(f"Laundry portion: **${laundry_bill:.2f}**")
-        st.write(f"**Me:** {my_hours:g} of {total_hours:g} hours = **{my_laundry_share * 100:.2f}%** of laundry (${my_laundry_bill:.2f})")
-        st.write(f"**You:** {your_hours:g} of {total_hours:g} hours = **{your_laundry_share * 100:.2f}%** of laundry (${your_laundry_bill:.2f})")
+        st.write(f"**Odame:** {my_hours:g} of {total_hours:g} hours = **{my_laundry_share * 100:.2f}%** of laundry (${my_laundry_bill:.2f})")
+        st.write(f"**Raphael:** {your_hours:g} of {total_hours:g} hours = **{your_laundry_share * 100:.2f}%** of laundry (${your_laundry_bill:.2f})")
 
         st.subheader("4. Final payment")
         left, right = st.columns(2)
         with left:
-            st.metric("Me", f"${my_payment:.2f}")
+            st.metric("Odame", f"${my_payment:.2f}")
             st.caption(f"{my_pct:.2f}% of the total bill")
         with right:
-            st.metric("You", f"${your_payment:.2f}")
+            st.metric("Raphael", f"${your_payment:.2f}")
             st.caption(f"{your_pct:.2f}% of the total bill")
         st.info(f"Both payments add up to **${my_payment + your_payment:.2f}**.")
 
