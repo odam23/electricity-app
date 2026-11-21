@@ -4,7 +4,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Electricity Bill Split", page_icon="")
 st.title("Monthly Electricity Calculator")
-st.write("Household electricity is split **50/50**. Laundry is split by **hours used**.")
+#st.write("Household electricity is split **50/50**. Laundry is split by **hours used**.")
 
 # The dryer is 240 V × 26 A = 6,240 W.
 # The washer is 120 V × 10 A = 1,200 W.
